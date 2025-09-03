@@ -10,7 +10,7 @@ class Buttons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(12),
       color: Colors.blue,
       alignment: Alignment.bottomRight,
        child: ElevatedButton(onPressed: () {}, child: Text (textname1)),

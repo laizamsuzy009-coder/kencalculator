@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ken/buttons.dart';
-import 'package:ken/buttons_all.dart';
+import 'package:ken/value_field.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -22,37 +23,101 @@ class MyApp extends StatelessWidget {
              width: 500,
              height: 400,
              decoration: BoxDecoration(color: const Color.fromARGB(255, 229, 217, 217)),
-             alignment: Alignment.bottomRight,
-             child: Text ("00.00"),
-            ),
-            Row(
-              children: [
-                Buttons(textname1: "0"),
-                Buttons(textname1: "1"),
-                Buttons(textname1: "2"),
-                Buttons(textname1: "3"),
-                Buttons(textname1: "4"),
-          
-              ],
-            ),
-            Row(
-              children: [
-                Buttons(textname1: "5"),
-                Buttons(textname1: "6"),
-                Buttons(textname1: "7"),
-                Buttons(textname1: "8"),
-                Buttons(textname1: "9"),
-          
-              ],
-            ),
-            // ButtonsAll(textname1: "1", textname2: "5", textname3: "9", textname4: "/"),
-            // ButtonsAll(textname1: "2", textname2: "6", textname3: "+", textname4: "Clear"),
-            // ButtonsAll(textname1: "3", textname2: "7", textname3: "-", textname4: "backspace"),
+             alignment: Alignment.center,
+             child: Column(
+               children: [
+                ValueField (textfield1: "Enter"),
+                Spacer(flex: 1),
+                 Text ("00.00", 
+                 textAlign: TextAlign.right,
+                    style: TextStyle(fontSize: 50,
+                                    fontWeight: FontWeight.bold),
+                                    
+                 ),
+               ],
+               
+             ),
             
+            ),
+            
+
+            Container(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Buttons(textname1: "CLEAR"),
+                  Buttons(textname1: "BACKSPACE"),
+                  
+                  
+                      
+                ],
+              ),
+            ),
+
+            Container(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Buttons(textname1: "7"),
+                  Buttons(textname1: "8"),
+                  Buttons(textname1: "9"),
+                  Buttons(textname1: "/"),
+                  
+                ],
+              ),
+            ),
+
+            Container(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Buttons(textname1: "4"),
+                  Buttons(textname1: "5"),
+                  Buttons(textname1: "6"),
+                  Buttons(textname1: "X"),
+                  
+                ],
+              ),
+            ),
+
+            Container(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Buttons(textname1: "1"),
+                  Buttons(textname1: "2"),
+                  Buttons(textname1: "3"),
+                  Buttons(textname1: "-"),
+                         
+                ],
+              ),
+            ),
+
+            Container(
+              decoration: BoxDecoration(color: Colors.blue),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Buttons(textname1: "0"),
+                  Buttons(textname1: "."),
+                  Buttons(textname1: "="),
+                  Buttons(textname1: "+"),
+                
+                
+                ],
+              ),
+            ),
+       
+       
           ],
         ),
       ),
     );
   }
 }
+
 
