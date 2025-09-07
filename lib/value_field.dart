@@ -1,24 +1,25 @@
 import 'package:flutter/material.dart';
 
 class ValueField extends StatefulWidget {
-  const ValueField({super.key, required this.textfield1});
+  const ValueField({super.key, required this.numbercontrollers});
 
-  final String textfield1;
-  
 
+ final TextEditingController numbercontrollers;
+ 
 
   @override
   State<ValueField> createState() => _ValueFieldState();
 }
 
 class _ValueFieldState extends State<ValueField> {
+  
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(15),
       decoration: BoxDecoration(color: Colors.deepPurple),
     child: TextField(
-     
+      controller: widget.numbercontrollers,
       style: TextStyle(color: const Color.fromARGB(223, 255, 255, 255), fontSize: 25),
       cursorColor: Colors.red,
       decoration: InputDecoration(
@@ -29,3 +30,4 @@ class _ValueFieldState extends State<ValueField> {
     );
   }
 }
+
